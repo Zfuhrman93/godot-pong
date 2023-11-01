@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://lcl7xdpsnl3j"]
+
+[ext_resource type="Texture2D" uid="uid://stinyanayskj" path="res://Sprites/Pong-Paddle.png" id="1_l8pii"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1qxtd"]
+size = Vector2(16, 64)
+
+[node name="Paddle Player" type="StaticBody2D"]
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_l8pii")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_1qxtd")
