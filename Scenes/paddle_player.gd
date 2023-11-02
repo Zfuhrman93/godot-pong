@@ -1,7 +1,7 @@
 extends Node2D
 
 # Declare member variables here. Examples:
-var speed = 300  # Adjust the speed of the paddle movement
+var speed = 600  # Adjust the speed of the paddle movement
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -14,12 +14,20 @@ func _process(delta):
 				move_paddle(1, delta)
 
 # Function to move the paddle
+#func move_paddle(direction, delta):
+#		# Calculate the new position of the paddle based on the speed and direction
+#		var new_y = position.y + direction * speed * delta
+#		
+#		# Limit the paddle's movement within the screen boundaries
+#		new_y = clamp(new_y, 0, get_viewport_rect().size.y - $Sprite.texture.get_height())
+#		
+#		
+#		# Set the paddle's position
+#		position.y = new_y
+
 func move_paddle(direction, delta):
-		# Calculate the new position of the paddle based on the speed and direction
-		var new_y = position.y + direction * speed * delta
-		
-		# Limit the paddle's movement within the screen boundaries
-		new_y = clamp(new_y, 0, get_viewport_rect().size.y - $Sprite.texture.get_height())
-		
-		# Set the paddle's position
-		position.y = new_y
+	var new_y = position.y + direction * speed * delta
+	var max_y = get_viewport_rect().size.y - ($Sprite.texture.get_height() / 2)
+	print("New Y:", new_y, "Max Y:", max_y)
+	new_y = clamp(new_y, ($Sprite.texture.get_height() / 2), max_y)
+	position.y = new_y

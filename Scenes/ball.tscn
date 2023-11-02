@@ -8,7 +8,7 @@ size = Vector2(8, 8)
 [node name="Ball" type="Area2D"]
 collision_layer = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_2n12l")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
