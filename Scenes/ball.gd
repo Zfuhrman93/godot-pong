@@ -7,6 +7,11 @@ func _process(delta):
 	position += velocity * delta
 	if position.y > (get_viewport_rect().size.y - ($Sprite.texture.get_height() / 2)) or position.y < (0 + ($Sprite.texture.get_height() / 2)):
 		velocity.y *= -1
+	if position.x > (get_viewport_rect().size.x - ($Sprite.texture.get_width() / 2)) or position.x < (0 + ($Sprite.texture.get_width() / 2)):
+		_score()
+
+func _score():
+	position = get_viewport_rect().size / 2
 
 func _on_area_entered(area):
 	if area.is_in_group("paddle_group"): 
