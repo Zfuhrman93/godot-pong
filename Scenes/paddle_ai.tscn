@@ -5,10 +5,11 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_va8cf"]
 size = Vector2(16, 64)
 
-[node name="Paddle AI" type="StaticBody2D"]
+[node name="Paddle AI" type="Area2D" groups=["paddle_group"]]
+collision_mask = 2
 
-[node name="Sprite" type="Sprite2D" parent="."]
+[node name="Sprite" type="Sprite2D" parent="." groups=["paddle_group"]]
 texture = ExtResource("1_skxyj")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["paddle_group"]]
 shape = SubResource("RectangleShape2D_va8cf")
