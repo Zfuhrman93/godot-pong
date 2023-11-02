@@ -7,11 +7,18 @@ func _process(delta):
 	position += velocity * delta
 	if position.y > (get_viewport_rect().size.y - ($Sprite.texture.get_height() / 2)) or position.y < (0 + ($Sprite.texture.get_height() / 2)):
 		velocity.y *= -1
-	if position.x > (get_viewport_rect().size.x - ($Sprite.texture.get_width() / 2)) or position.x < (0 + ($Sprite.texture.get_width() / 2)):
-		_score()
+	if position.x > (get_viewport_rect().size.x - ($Sprite.texture.get_width() / 2)):
+		_score("ai")
+	if position.x < (0 + ($Sprite.texture.get_width() / 2)):
+		_score("player")
 
-func _score():
+func _score(side):
 	position = get_viewport_rect().size / 2
+	if side == "player":
+		Scores.AI_score += 1
+	if side == "ai":
+		Scores.player_score += 1
+	print("Player: " + str(Scores.player_score) + " AI: " + str(Scores.AI_score))
 
 func _on_area_entered(area):
 	if area.is_in_group("paddle_group"): 
