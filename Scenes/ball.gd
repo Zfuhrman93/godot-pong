@@ -9,7 +9,7 @@ func _process(delta):
 func _on_area_entered(area):
 	if area.is_in_group("paddle_group"): 
 		var collision_point = area.to_local(transform.origin) # Get the collision point in local coordinates of the paddle        
-		var hit_position = (collision_point.y / (area.texture.get_height() / 2)).clamped(-1, 1) # Calculate the hit position as a value between -1 and 1 based on the collision point's y-coordinate
+		var hit_position = (collision_point.y / (64 / 2)) # Calculate the hit position as a value between -1 and 1 based on the collision point's y-coordinate
 		modify_ball_velocity(hit_position) # Modify the ball's velocity based on hit_position
 
 func modify_ball_velocity(hit_position):
