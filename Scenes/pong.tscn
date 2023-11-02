@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://dbmbfqd3qvgj0"]
+[gd_scene load_steps=8 format=3 uid="uid://dbmbfqd3qvgj0"]
 
+[ext_resource type="Script" path="res://Scenes/UI.gd" id="1_j1wfm"]
 [ext_resource type="PackedScene" uid="uid://lcl7xdpsnl3j" path="res://Scenes/paddle_player.tscn" id="1_x8cmw"]
 [ext_resource type="Script" path="res://Scenes/paddle_player.gd" id="2_kanma"]
 [ext_resource type="PackedScene" uid="uid://c70qus5v5q0i6" path="res://Scenes/paddle_ai.tscn" id="2_wory8"]
@@ -8,6 +9,27 @@
 [ext_resource type="Script" path="res://Scenes/ball.gd" id="6_a0bug"]
 
 [node name="Pong" type="Node2D"]
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1155.0
+offset_bottom = 647.0
+script = ExtResource("1_j1wfm")
+
+[node name="Player" type="Label" parent="UI"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "0"
+
+[node name="AI" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = 1112.0
+offset_top = 2.0
+offset_right = 1152.0
+offset_bottom = 28.0
+text = "0"
 
 [node name="Ball" parent="." instance=ExtResource("5_25ku3")]
 position = Vector2(606, 309)
