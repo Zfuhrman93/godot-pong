@@ -5,7 +5,7 @@ var bounce_adjust = 200
 
 func _process(delta):
 	position += velocity * delta
-	if position.y > (get_viewport_rect().size.y - ($Sprite.texture.get_height() / 2)):
+	if position.y > (get_viewport_rect().size.y - ($Sprite.texture.get_height() / 2)) or position.y < (0 + ($Sprite.texture.get_height() / 2)):
 		velocity.y *= -1
 
 func _on_area_entered(area):

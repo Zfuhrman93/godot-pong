@@ -28,6 +28,5 @@ func _process(delta):
 func move_paddle(direction, delta):
 	var new_y = position.y + direction * speed * delta
 	var max_y = get_viewport_rect().size.y - ($Sprite.texture.get_height() / 2)
-	print("New Y:", new_y, "Max Y:", max_y)
 	new_y = clamp(new_y, ($Sprite.texture.get_height() / 2), max_y)
 	position.y = new_y
