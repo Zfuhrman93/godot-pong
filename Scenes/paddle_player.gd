@@ -13,18 +13,6 @@ func _process(delta):
 		if Input.is_action_pressed("Down"):
 				move_paddle(1, delta)
 
-# Function to move the paddle
-#func move_paddle(direction, delta):
-#		# Calculate the new position of the paddle based on the speed and direction
-#		var new_y = position.y + direction * speed * delta
-#		
-#		# Limit the paddle's movement within the screen boundaries
-#		new_y = clamp(new_y, 0, get_viewport_rect().size.y - $Sprite.texture.get_height())
-#		
-#		
-#		# Set the paddle's position
-#		position.y = new_y
-
 func move_paddle(direction, delta):
 	var new_y = position.y + direction * speed * delta
 	var max_y = get_viewport_rect().size.y - ($Sprite.texture.get_height() / 2)

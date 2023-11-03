@@ -1,7 +1,8 @@
 extends Area2D
 
-var velocity = Vector2(200, 0) # Initial velocity of the ball
-var bounce_adjust = 200
+var ball_speed = 300
+var velocity = Vector2((ball_speed * -1), ball_speed) # Initial velocity of the ball
+var bounce_adjust = 150
 
 func _process(delta):
 	position += velocity * delta
