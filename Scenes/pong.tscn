@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://dbmbfqd3qvgj0"]
+[gd_scene load_steps=9 format=3 uid="uid://dbmbfqd3qvgj0"]
 
+[ext_resource type="Script" path="res://Scenes/pong.gd" id="1_gowhl"]
 [ext_resource type="Script" path="res://Scenes/UI.gd" id="1_j1wfm"]
 [ext_resource type="PackedScene" uid="uid://lcl7xdpsnl3j" path="res://Scenes/paddle_player.tscn" id="1_x8cmw"]
 [ext_resource type="Script" path="res://Scenes/paddle_player.gd" id="2_kanma"]
@@ -9,6 +10,7 @@
 [ext_resource type="Script" path="res://Scenes/ball.gd" id="6_a0bug"]
 
 [node name="Pong" type="Node2D"]
+script = ExtResource("1_gowhl")
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
