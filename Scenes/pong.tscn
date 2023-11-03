@@ -13,34 +13,36 @@
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 1155.0
-offset_bottom = 647.0
+offset_left = -3.0
+offset_right = 602.0
+offset_bottom = 399.0
 script = ExtResource("1_j1wfm")
 
 [node name="Player" type="Label" parent="UI"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 5.0
+offset_right = 45.0
+offset_bottom = 26.0
 text = "0"
 
 [node name="AI" type="Label" parent="UI"]
 layout_mode = 0
-offset_left = 1112.0
+offset_left = 565.0
 offset_top = 2.0
-offset_right = 1152.0
+offset_right = 605.0
 offset_bottom = 28.0
 text = "0"
 
 [node name="Ball" parent="." instance=ExtResource("5_25ku3")]
-position = Vector2(606, 309)
+position = Vector2(300, 200)
 script = ExtResource("6_a0bug")
 
 [node name="Paddle Player" parent="." instance=ExtResource("1_x8cmw")]
-position = Vector2(88, 300)
+position = Vector2(29, 200)
 script = ExtResource("2_kanma")
 
 [node name="Paddle AI" parent="." instance=ExtResource("2_wory8")]
-position = Vector2(1064, 300)
+position = Vector2(571, 200)
 script = ExtResource("4_3smw3")
 
 [connection signal="area_entered" from="Ball" to="Ball" method="_on_area_entered"]

@@ -19,6 +19,11 @@ config/icon="res://icon.svg"
 
 Scores="*res://Scripts/scores.gd"
 
+[display]
+
+window/size/viewport_width=600
+window/size/viewport_height=400
+
 [input]
 
 Up={
