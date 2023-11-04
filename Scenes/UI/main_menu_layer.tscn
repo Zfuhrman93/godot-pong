@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://8uyxcwtbfowd"]
+
+[ext_resource type="Script" path="res://Scenes/UI/End Game.gd" id="1_kvs71"]
+[ext_resource type="Script" path="res://Scenes/UI/Start Game.gd" id="1_yivkp"]
+
+[node name="Main Menu Layer" type="CanvasLayer"]
+
+[node name="Main Menu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Main Menu"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -22.0
+offset_right = 22.0
+offset_bottom = 26.0
+grow_horizontal = 2
+text = "Pong!"
+
+[node name="Buttons" type="VBoxContainer" parent="Main Menu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Start Game" type="Button" parent="Main Menu/Buttons"]
+layout_mode = 2
+text = "Start Game!"
+script = ExtResource("1_yivkp")
+
+[node name="End Game" type="Button" parent="Main Menu/Buttons"]
+layout_mode = 2
+text = "Quit Game!"
+script = ExtResource("1_kvs71")
+
+[connection signal="pressed" from="Main Menu/Buttons/Start Game" to="Main Menu/Buttons/Start Game" method="_on_pressed"]
+[connection signal="pressed" from="Main Menu/Buttons/End Game" to="Main Menu/Buttons/End Game" method="_on_pressed"]

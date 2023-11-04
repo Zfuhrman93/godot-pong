@@ -15,3 +15,4 @@ func _reset():
 	player.global_position.y = Intial.position_y
 	AI.global_position.y = Intial.position_y
 	ball.global_position = Intial.ball_position
+	get_tree().change_scene_to_file("res://Scenes/Levels/main_menu.tscn")
