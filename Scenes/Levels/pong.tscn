@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://dbmbfqd3qvgj0"]
+[gd_scene load_steps=10 format=3 uid="uid://dbmbfqd3qvgj0"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/pong.gd" id="1_f6jt8"]
 [ext_resource type="PackedScene" uid="uid://lcl7xdpsnl3j" path="res://Scenes/paddle_player.tscn" id="1_x8cmw"]
+[ext_resource type="Texture2D" uid="uid://dl86pdsg5562f" path="res://Sprites/Pong-Background.png" id="2_fmoas"]
 [ext_resource type="Script" path="res://Scenes/paddle_player.gd" id="2_kanma"]
 [ext_resource type="PackedScene" uid="uid://cqe4x1cheofr2" path="res://Scenes/UI/game_ui.tscn" id="2_ke1hi"]
 [ext_resource type="PackedScene" uid="uid://c70qus5v5q0i6" path="res://Scenes/paddle_ai.tscn" id="2_wory8"]
@@ -11,6 +12,10 @@
 
 [node name="Pong" type="Node2D"]
 script = ExtResource("1_f6jt8")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(300, 200)
+texture = ExtResource("2_fmoas")
 
 [node name="Game UI" parent="." instance=ExtResource("2_ke1hi")]
 

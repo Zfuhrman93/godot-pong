@@ -1,7 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://lxont1b4f5fi"]
+[gd_scene load_steps=3 format=3 uid="uid://lxont1b4f5fi"]
 
 [ext_resource type="PackedScene" uid="uid://8uyxcwtbfowd" path="res://Scenes/UI/main_menu_layer.tscn" id="1_5ni4d"]
+[ext_resource type="Texture2D" uid="uid://btbf157d7ypk8" path="res://Sprites/Pong Menu.png" id="1_ijesj"]
 
 [node name="Main Menu" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(300, 200)
+texture = ExtResource("1_ijesj")
 
 [node name="Main Menu Layer" parent="." instance=ExtResource("1_5ni4d")]

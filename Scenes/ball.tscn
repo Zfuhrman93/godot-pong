@@ -18,6 +18,7 @@ shape = SubResource("RectangleShape2D_in8a1")
 
 [node name="Paddle Hit" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_74qh3")
+volume_db = -10.0
 
 [node name="Score" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_jlmne")
