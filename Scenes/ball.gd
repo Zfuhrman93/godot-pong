@@ -1,5 +1,8 @@
 extends Area2D
 
+@onready var hit_sound = $"Paddle Hit"
+@onready var score_sound = $Score
+
 var ball_speed = 350
 var velocity = Vector2((ball_speed * -1), ball_speed) # Initial velocity of the ball
 var bounce_adjust = 250
@@ -10,8 +13,10 @@ func _process(delta):
 		velocity.y *= -1
 	if position.x > (get_viewport_rect().size.x - ($Sprite.texture.get_width() / 2)):
 		_score("ai")
+		score_sound.play()
 	if position.x < (0 + ($Sprite.texture.get_width() / 2)):
 		_score("player")
+		score_sound.play()
 
 func _score(side):
 	position = get_viewport_rect().size / 2
@@ -27,6 +32,7 @@ func _on_area_entered(area):
 		var collision_point = area.to_local(transform.origin) # Get the collision point in local coordinates of the paddle        
 		var hit_position = (collision_point.y / (sprite.texture.get_height() / 2)) # Calculate the hit position as a value between -1 and 1 based on the collision point's y-coordinate
 		modify_ball_velocity(hit_position) # Modify the ball's velocity based on hit_position
+		hit_sound.play()
 
 func modify_ball_velocity(hit_position):
 		# Modify the ball's velocity based on hit_position

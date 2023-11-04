@@ -4,6 +4,7 @@ extends Node2D
 @onready var AI = $"Paddle AI"
 @onready var ball = $Ball
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Input.is_action_pressed("Reset"):

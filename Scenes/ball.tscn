@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://co4uhkngdoh08"]
+[gd_scene load_steps=5 format=3 uid="uid://co4uhkngdoh08"]
 
 [ext_resource type="Texture2D" uid="uid://bafsy4axuyc8n" path="res://Sprites/Pong-Ball.png" id="1_2n12l"]
+[ext_resource type="AudioStream" uid="uid://cxhdqhycojxb2" path="res://Audio/ping_pong_8bit_beeep.ogg" id="2_74qh3"]
+[ext_resource type="AudioStream" uid="uid://dv75wdcalo4by" path="res://Audio/ping_pong_8bit_peeeeeep.ogg" id="3_jlmne"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_in8a1"]
 size = Vector2(8, 8)
@@ -13,3 +15,9 @@ texture = ExtResource("1_2n12l")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_in8a1")
+
+[node name="Paddle Hit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_74qh3")
+
+[node name="Score" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_jlmne")
