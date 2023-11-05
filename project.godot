@@ -24,6 +24,7 @@ Intial="*res://Scripts/intial.gd"
 
 window/size/viewport_width=600
 window/size/viewport_height=400
+window/stretch/mode="viewport"
 
 [input]
 
