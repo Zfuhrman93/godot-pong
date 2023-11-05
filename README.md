@@ -10,6 +10,6 @@ Move Paddle (WASD)
 
 Return to Menu (ESC)
 
-The sound effects used were downloaded from "FreeGameArt.org": https://opengameart.org/content/3-ping-pong-sounds-8-bit-style
+The sound effects used were downloaded from "OpenGameArt.org": https://opengameart.org/content/3-ping-pong-sounds-8-bit-style
 
 The graphics (Backgrounds, Paddles, and Ball) were made in Asprite by me. 
